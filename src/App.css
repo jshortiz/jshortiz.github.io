@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background-color: #ffffff;
-  color: #0cbacb; /* cyan blue */
+  color: red;
   height: 100vh;
   display: flex;
   align-items: center;
