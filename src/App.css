@@ -1,45 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+/* ----------- Tokens ----------- */
+:root {
+  --bg: #f3f5f7;
+  --text: #111827;
+  --muted: #6b7280;
+  --primary: #0f172a;
+
+  /* spacing scale */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s7: 32px;
+  --s8: 40px;
+
+  /* A4 tuned internal margins & column gap */
+  --page-pad: 18mm;
+  --col-gap: 12mm;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #ffffff;
-  color: red;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.45;
 }
 
-.App {
-  text-align: center;
-}
+/* ----------- Page (A4 print-perfect) ----------- */
+.viewport { padding: var(--s8) var(--s4); }
 
-.App-header {
+.page {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: #fff;
+  padding: var(--page-pad);
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: var(--s7);
 }
 
-.App-logo {
-  height: 150px;
-  animation: App-logo-spin infinite 20s linear;
-  margin-bottom: 20px;
+/* Two columns: narrow left, wider right */
+.columns {
+  display: grid;
+  grid-template-columns: 0.95fr 1.7fr;
+  gap: var(--col-gap);
 }
 
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+/* ----------- Sidebar ----------- */
+.nameblock { margin-bottom: var(--s6); }
+.name {
+  margin: 0 0 var(--s2) 0;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--primary);
+}
+.title { color: var(--muted); font-weight: 500; }
+
+/* Circular photo */
+.photo-wrap {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: var(--s6);
+}
+.photo {
+  width: 58mm;            /* print-stable size */
+  height: 58mm;
+  object-fit: cover;      /* fill the circle nicely */
+  border-radius: 50%;     /* <- circle */
+  border: 2px solid #e5e7eb;
 }
 
-p {
-  font-size: 1.2rem;
-  color: #333;
+/* ----------- Sections ----------- */
+.section { break-inside: avoid; }
+.section + .section { margin-top: var(--s7); }
+
+.section__title {
+  margin: 0 0 var(--s3);
+  font-size: 14px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 700;
+  position: relative;
+}
+.section__title::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  background: #e5e7eb;
+  margin-top: var(--s2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section__body { font-size: 12.5px; }
+.muted { color: var(--muted); }
+.para { margin: 0; text-align: justify; }
+
+.list { margin: 0; padding: 0; list-style: none; }
+.list__item + .list__item { margin-top: var(--s2); }
+
+.bullets { margin: 0; padding-left: 1.1em; }
+.bullets li { margin-bottom: var(--s2); }
+.bullets--tight li { margin-bottom: 6px; }
+
+/* Entries (education/experience) */
+.entry { margin-bottom: var(--s6); }
+.entry:last-child { margin-bottom: 0; }
+.entry__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--s4);
+  margin-bottom: var(--s2);
+}
+.entry__role { font-weight: 700; }
+.entry__place { color: var(--muted); }
+.entry__period { color: var(--muted); white-space: nowrap; }
+
+/* Skills */
+.skills-group { margin-bottom: var(--s5); }
+.skills-group__title { font-weight: 700; margin-bottom: var(--s2); }
+
+/* ----------- Print rules ----------- */
+@media print {
+  @page { size: A4; margin: 0; }
+  body { background: #fff; }
+  .viewport { padding: 0; }
+  .page { box-shadow: none; }
+  .photo { border-color: #d1d5db; }
+}
+
+/* ----------- Small-screen preview ----------- */
+@media (max-width: 900px) {
+  .page { width: 100%; min-height: auto; padding: 24px; }
+  .columns { grid-template-columns: 1fr; gap: 28px; }
+  .photo { width: 180px; height: 180px; }
 }
