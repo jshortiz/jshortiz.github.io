@@ -138,7 +138,10 @@ const App = () => {
       <header className="header">
         <div className="container">
           <nav className="navbar">
-            <div className="nav-brand">J.Ortiz</div>
+            {/* Made the logo a link (no underline) */}
+            <a href="https://jshortiz.github.io/" className="nav-brand" style={{ textDecoration: 'none' }}>
+              J.Ortiz
+            </a>
             <ul className="nav-menu">
               <li><a href="#about">About</a></li>
               <li><a href="#projects">Projects</a></li>
