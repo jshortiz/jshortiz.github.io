@@ -19,7 +19,7 @@ const App = () => {
       email: 'jh.ortizxc@gmail.com',
       phone: '0963-893-1304',
       location: 'Iligan City, 9200 Philippines',
-      linkedin: 'https://linkedin.com/in/jhonnasortiz',
+      linkedin: 'https://linkedin.com/in/joshua-ortiz-47715b370',
       github: 'https://github.com/jshortiz',
     },
     skills: [
