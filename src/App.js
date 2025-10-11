@@ -55,21 +55,21 @@ const App = () => {
     projects: [
       {
         title: 'Project One Title',
-        description: 'A brief, compelling description of your project. Talk about the problem it solves and the technologies used.',
+        description: 'Lorem Ipsum.',
         imageUrl: 'https://placehold.co/600x400/334155/f8fafc?text=Project+One',
         liveUrl: '#',
         sourceUrl: '#',
       },
       {
         title: 'Project Two Title',
-        description: 'Showcase another great project. Mention your role and the key features you implemented.',
+        description: 'Lorem Ipsum',
         imageUrl: 'https://placehold.co/600x400/334155/f8fafc?text=Project+Two',
         liveUrl: '#',
         sourceUrl: '#',
       },
       {
         title: 'Project Three Title',
-        description: 'This is your chance to highlight a different skill or technology. Make it sound impressive!',
+        description: 'Lorem Ipsum',
         imageUrl: 'https://placehold.co/600x400/334155/f8fafc?text=Project+Three',
         liveUrl: '#',
         sourceUrl: '#',
