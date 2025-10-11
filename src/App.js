@@ -8,6 +8,29 @@ const Icon = ({ path, className }) => (
   </svg>
 );
 
+// Small helper to build an email link that works well on desktop and mobile
+const buildEmailHref = (email, subject = '', body = '') => {
+  const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : '';
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+
+  const enc = encodeURIComponent;
+  if (isMobile) {
+    // Mobile: open default mail app
+    let href = `mailto:${email}`;
+    const params = [];
+    if (subject) params.push(`subject=${enc(subject)}`);
+    if (body) params.push(`body=${enc(body)}`);
+    if (params.length) href += `?${params.join('&')}`;
+    return href;
+  }
+
+  // Desktop: open Gmail compose in a new tab
+  let href = `https://mail.google.com/mail/?view=cm&fs=1&to=${enc(email)}`;
+  if (subject) href += `&su=${enc(subject)}`;
+  if (body) href += `&body=${enc(body)}`;
+  return href;
+};
+
 const App = () => {
   // Portfolio data
   const portfolioData = {
@@ -75,6 +98,11 @@ const App = () => {
       },
     ]
   };
+
+  // Optional: customize the prefilled subject/body of the email
+  const emailSubject = 'Inquiry from your portfolio';
+  const emailBody = 'Hi Joshua,\n\nI saw your portfolio and would love to connect.\n\nBest regards,\n';
+  const emailHref = buildEmailHref(portfolioData.contact.email, emailSubject, emailBody);
 
   return (
     <div className="portfolio">
@@ -225,9 +253,9 @@ const App = () => {
             I'm currently looking for new opportunities. If you have a project in mind or just want to say hello, feel free to reach out!
           </p>
 
-          {/* ✅ Updated Gmail link */}
+          {/* ✅ Mobile-friendly + Desktop Gmail compose link */}
           <a
-            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${portfolioData.contact.email}`}
+            href={emailHref}
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
