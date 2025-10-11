@@ -63,8 +63,8 @@ const App = () => {
   // Portfolio data
   const portfolioData = {
     name: 'Joshua Ortiz',
-    title: 'Aspiring Full Stack Developer',
-    bio: 'Proactive and adaptable IT fresh graduate eager to leverage academic knowledge in real-world projects. A fast learner with a growth mindset, I thrive in team environments and value open, clear communication. Seeking a full-time role where I can expand my skillset, deliver innovative solutions, and contribute immediately with resilience, an open mind, and a collaborative spirit.',
+    title: 'Web Developer',
+    bio: 'Versatile Web Developer experienced in WordPress, Shopify, and creating fully customized websites from scratch. Passionate about building responsive, user-focused designs that combine functionality and creativity. A fast learner with a growth mindset and strong teamwork skills, dedicated to delivering innovative and reliable digital solutions. I enjoy turning ideas into functional, visually engaging websites.',
     contact: {
       email: 'jsh.ortizxc@gmail.com',
       phone: '0976-410-0610',
@@ -184,10 +184,13 @@ const App = () => {
             <h2 className="section-title">About Me</h2>
             <div className="about-content">
               <p>
-                Hello! I'm Joshua, a passionate developer based in the Philippines. I recently graduated with a degree in Information Technology from St. Michael's College, where I discovered my passion for creating dynamic and user-friendly web applications.
+                Hey there! I’m Joshua, a passionate Web Developer based in the Philippines who loves turning ideas into interactive, user-friendly websites. I earned my degree in Information Technology from St. Michael’s College, where I discovered that coding isn’t just about syntax  it’s about solving real problems and creating cool things that actually work.
               </p>
               <p>
-                My journey into tech started with a fascination for how things work, which quickly evolved into a love for coding and problem-solving. I'm proficient in front-end technologies like React, HTML, and CSS, as well as back-end development using Node.js and Laravel. I'm always eager to learn new things and take on challenging projects that push my skills to the next level. When I'm not coding, I enjoy exploring new places and watching movies.
+                What started as curiosity about how websites tick soon became a full-blown obsession with clean code, smooth interfaces, and pixel-perfect design. I work across both front-end and back-end, building projects with tools like React, Node.js, Laravel, WordPress, and Shopify.
+              </p>
+              <p>
+                I’m always up for learning new tech, experimenting with ideas, and tackling projects that push my creativity (and sometimes my caffeine limits ☕). When I’m not coding, you’ll probably find me exploring new places, watching movies, or planning my next side project that may or may not ever leave the “in-progress” folder.
               </p>
             </div>
           </div>
@@ -281,7 +284,7 @@ const App = () => {
         <div className="container">
           <h2 className="footer-title">Get In Touch</h2>
         <p className="footer-text">
-            I'm currently looking for new opportunities. If you have a project in mind or just want to say hello, feel free to reach out!
+            Got an idea, collaboration, or just want to say hi? My inbox is always open!
           </p>
 
           {/* ✅ Mobile-friendly + Desktop Gmail compose link */}
