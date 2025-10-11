@@ -1,25 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Raleway:wght@400;500;700&display=swap");
 
 /* ----------- Tokens ----------- */
 :root {
-  --bg: #f3f5f7;
-  --text: #111827;
-  --muted: #6b7280;
-  --primary: #0f172a;
+  --bg: #f8f9fa;
+  --text: #212529;
+  --muted: #6c757d;
+  --primary: #007bff;
 
   /* spacing scale */
-  --s1: 4px;
-  --s2: 8px;
-  --s3: 12px;
-  --s4: 16px;
-  --s5: 20px;
-  --s6: 24px;
-  --s7: 32px;
-  --s8: 40px;
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.25rem;
+  --s6: 1.5rem;
+  --s7: 2rem;
+  --s8: 2.5rem;
 
   /* A4 tuned internal margins & column gap */
-  --page-pad: 18mm;
-  --col-gap: 12mm;
+  --page-pad: 1.5rem;
+  --col-gap: 1rem;
 }
 
 * { box-sizing: border-box; }
@@ -28,8 +28,8 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  line-height: 1.45;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5;
 }
 
 /* ----------- Page (A4 print-perfect) ----------- */
@@ -58,7 +58,8 @@ body {
 .nameblock { margin-bottom: var(--s6); }
 .name {
   margin: 0 0 var(--s2) 0;
-  font-size: 28px;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.1;
   color: var(--primary);
@@ -72,11 +73,12 @@ body {
   margin-bottom: var(--s6);
 }
 .photo {
-  width: 58mm;            /* print-stable size */
-  height: 58mm;
-  object-fit: cover;      /* fill the circle nicely */
-  border-radius: 50%;     /* <- circle */
-  border: 2px solid #e5e7eb;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
 }
 
 /* ----------- Sections ----------- */
@@ -85,12 +87,13 @@ body {
 
 .section__title {
   margin: 0 0 var(--s3);
-  font-size: 14px;
+  font-size: 1.2rem;
   letter-spacing: .04em;
   text-transform: uppercase;
   color: var(--primary);
   font-weight: 700;
   position: relative;
+  font-family: 'Playfair Display', serif;
 }
 .section__title::after {
   content: "";
@@ -101,9 +104,9 @@ body {
   margin-top: var(--s2);
 }
 
-.section__body { font-size: 12.5px; }
+.section__body { font-size: 14px; }
 .muted { color: var(--muted); }
-.para { margin: 0; text-align: justify; }
+.para { margin: 0; text-align: left; }
 
 .list { margin: 0; padding: 0; list-style: none; }
 .list__item + .list__item { margin-top: var(--s2); }
