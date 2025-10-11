@@ -224,12 +224,23 @@ const App = () => {
           <p className="footer-text">
             I'm currently looking for new opportunities. If you have a project in mind or just want to say hello, feel free to reach out!
           </p>
-          <a href={`mailto:${portfolioData.contact.email}`} className="btn btn-primary">{portfolioData.contact.email}</a>
+
+          {/* ✅ Updated Gmail link */}
+          <a
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${portfolioData.contact.email}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary"
+          >
+            {portfolioData.contact.email}
+          </a>
+
           <div className="footer-socials">
             <a href={portfolioData.contact.github} target="_blank" rel="noopener noreferrer">GitHub</a>
             <span>&bull;</span>
             <a href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
+
           <p className="footer-copyright">
             &copy; {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>
