@@ -9,15 +9,14 @@ const Icon = ({ path, className }) => (
 );
 
 const App = () => {
-  // --- Data for your portfolio ---
-  // You can easily update this information
+  // Portfolio data
   const portfolioData = {
     name: 'Joshua Ortiz',
     title: 'Aspiring Full Stack Developer',
     bio: 'Proactive and adaptable IT fresh graduate eager to leverage academic knowledge in real-world projects. A fast learner with a growth mindset, I thrive in team environments and value open, clear communication. Seeking a full-time role where I can expand my skillset, deliver innovative solutions, and contribute immediately with resilience, an open mind, and a collaborative spirit.',
     contact: {
-      email: 'jh.ortizxc@gmail.com',
-      phone: '0963-893-1304',
+      email: 'jsh.ortizxc@gmail.com',
+      phone: '0976-410-0610',
       location: 'Iligan City, 9200 Philippines',
       linkedin: 'https://linkedin.com/in/joshua-ortiz-47715b370',
       github: 'https://github.com/jshortiz',
