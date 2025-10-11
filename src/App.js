@@ -284,7 +284,7 @@ const App = () => {
         <div className="container">
           <h2 className="footer-title">Get In Touch</h2>
         <p className="footer-text">
-            Got an idea, collaboration, or just want to say hi? My inbox is always open!
+            Whether it’s a project, an idea, or just a friendly hello drop me a message anytime!
           </p>
 
           {/* ✅ Mobile-friendly + Desktop Gmail compose link */}
