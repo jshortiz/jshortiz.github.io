@@ -442,3 +442,46 @@ body {
     height: 250px;
   }
 }
+
+/* Back-to-top button - white shade with blue icon */
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e5e7eb;      /* light gray border */
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  background: #ffffff;             /* white shade */
+  color: #0056B3;                  /* icon color */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  z-index: 1000;
+}
+
+.to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.to-top:hover,
+.to-top:focus {
+  background: #f9fafb;             /* very light gray on hover */
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+  outline: none;
+}
+
+.to-top svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+  /* inherits color #0056B3 from .to-top */
+  fill: currentColor;
+}

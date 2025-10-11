@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 
 // Helper component for SVG icons
@@ -7,6 +7,34 @@ const Icon = ({ path, className }) => (
     <path d={path} />
   </svg>
 );
+
+// Back-to-top floating button (appears after scrolling)
+const BackToTop = () => {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setVisible(window.scrollY > 300);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // run once on mount
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  return (
+    <button
+      type="button"
+      className={`to-top ${visible ? 'show' : ''}`}
+      aria-label="Back to top"
+      onClick={scrollToTop}
+    >
+      {/* Up arrow icon */}
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+        <path d="M12 5l7 7-1.4 1.4L13 9.8V20h-2V9.8L6.4 13.4 5 12l7-7z" />
+      </svg>
+    </button>
+  );
+};
 
 // Small helper to build an email link that works well on desktop and mobile
 const buildEmailHref = (email, subject = '', body = '') => {
@@ -249,7 +277,7 @@ const App = () => {
       <footer id="contact" className="footer">
         <div className="container">
           <h2 className="footer-title">Get In Touch</h2>
-          <p className="footer-text">
+        <p className="footer-text">
             I'm currently looking for new opportunities. If you have a project in mind or just want to say hello, feel free to reach out!
           </p>
 
@@ -269,11 +297,14 @@ const App = () => {
             <a href={portfolioData.contact.linkedin} target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
 
-          <p className="footer-copyright">
+          <p className="footeropyright">
             &copy; {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
           </p>
         </div>
       </footer>
+
+      {/* Floating back-to-top button */}
+      <BackToTop />
     </div>
   );
 }
