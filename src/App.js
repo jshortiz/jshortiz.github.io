@@ -36,27 +36,9 @@ const BackToTop = () => {
   );
 };
 
-// Small helper to build an email link that works well on desktop and mobile
-const buildEmailHref = (email, subject = '', body = '') => {
-  const ua = typeof navigator !== 'undefined' ? navigator.userAgent || '' : '';
-  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
-
-  const enc = encodeURIComponent;
-  if (isMobile) {
-    // Mobile: open default mail app
-    let href = `mailto:${email}`;
-    const params = [];
-    if (subject) params.push(`subject=${enc(subject)}`);
-    if (body) params.push(`body=${enc(body)}`);
-    if (params.length) href += `?${params.join('&')}`;
-    return href;
-  }
-
-  // Desktop: open Gmail compose in a new tab
-  let href = `https://mail.google.com/mail/?view=cm&fs=1&to=${enc(email)}`;
-  if (subject) href += `&su=${enc(subject)}`;
-  if (body) href += `&body=${enc(body)}`;
-  return href;
+// ✅ Universal email link (works on all devices, lets users choose email app)
+const buildEmailHref = (email) => {
+  return `mailto:${email}`;
 };
 
 const App = () => {
@@ -127,10 +109,8 @@ const App = () => {
     ]
   };
 
-  // Optional: customize the prefilled subject/body of the email
-  const emailSubject = 'Inquiry from your portfolio';
-  const emailBody = 'Hi Joshua,\n\nI saw your portfolio and would love to connect.\n\nBest regards,\n';
-  const emailHref = buildEmailHref(portfolioData.contact.email, emailSubject, emailBody);
+
+  const emailHref = buildEmailHref(portfolioData.contact.email);
 
   return (
     <div className="portfolio">
@@ -138,7 +118,6 @@ const App = () => {
       <header className="header">
         <div className="container">
           <nav className="navbar">
-            {/* Made the logo a link (no underline) */}
             <a href="https://jshortiz.github.io/" className="nav-brand" style={{ textDecoration: 'none' }}>
               J.Ortiz
             </a>
@@ -172,7 +151,6 @@ const App = () => {
               </div>
             </div>
             <div className="hero-image-container">
-              {/* Image from /public */}
               <img src="/grad-pic.jpg" alt={portfolioData.name} className="hero-image" />
             </div>
           </div>
@@ -184,7 +162,7 @@ const App = () => {
             <h2 className="section-title">About Me</h2>
             <div className="about-content">
               <p>
-                Hey there! I’m Joshua, a passionate Web Developer based in the Philippines who loves turning ideas into interactive, user-friendly websites. I earned my degree in Information Technology from St. Michael’s College, where I discovered that coding isn’t just about syntax  it’s about solving real problems and creating cool things that actually work.
+                Hey there! I’m Joshua, a passionate Web Developer based in the Philippines who loves turning ideas into interactive, user-friendly websites. I earned my degree in Information Technology from St. Michael’s College, where I discovered that coding isn’t just about syntax—it’s about solving real problems and creating cool things that actually work.
               </p>
               <p>
                 What started as curiosity about how websites tick soon became a full-blown obsession with clean code, smooth interfaces, and pixel-perfect design. I work across both front-end and back-end, building projects with tools like React, Node.js, Laravel, WordPress, and Shopify.
@@ -283,15 +261,13 @@ const App = () => {
       <footer id="contact" className="footer">
         <div className="container">
           <h2 className="footer-title">Get In Touch</h2>
-        <p className="footer-text">
-            Whether it’s a project, an idea, or just a friendly hello drop me a message anytime!
+          <p className="footer-text">
+            Whether it’s a project, an idea, or just a friendly hello — drop me a message anytime!
           </p>
 
-          {/* ✅ Mobile-friendly + Desktop Gmail compose link */}
+          { }
           <a
             href={emailHref}
-            target="_blank"
-            rel="noopener noreferrer"
             className="btn btn-primary"
           >
             {portfolioData.contact.email}
@@ -313,6 +289,6 @@ const App = () => {
       <BackToTop />
     </div>
   );
-}
+};
 
 export default App;
