@@ -297,7 +297,7 @@ const App = () => {
   // Enhanced portfolio data
   const portfolioData = {
     name: 'Joshua Ortiz',
-    title: 'Full-Stack Web Developer',
+    title: 'Web Developer',
     bio: 'Versatile Web Developer experienced in WordPress, Shopify, and creating fully customized websites from scratch. Passionate about building responsive, user-focused designs that combine functionality and creativity.',
     contact: {
       email: 'jsh.ortizxc@gmail.com',
@@ -366,7 +366,7 @@ const App = () => {
         institution: 'St. Michael\'s College',
         period: '2024 - 2025',
         location: 'Iligan City, Philippines',
-        gpa: '3.8'
+        gpa: '1.9'
       },
     ],
     projects: [
