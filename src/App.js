@@ -451,7 +451,7 @@ const App = () => {
                 ))}
               </ul>
               <a href="#contact" className="nav-contact-btn" onClick={() => scrollToSection('contact')}>
-                Get In Touch
+                Contact Me!
               </a>
             </div>
 
