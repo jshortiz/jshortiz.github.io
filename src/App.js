@@ -478,7 +478,7 @@ const App = () => {
           <ParticleBackground />
           <div className="container hero-container">
             <div className="hero-content">
-              <div className="hero-badge">Available for Freelance</div>
+              <div className="hero-badge">Hey There!</div>
               <h1 className="hero-name">
                 <span className="name-gradient">{portfolioData.name}</span>
               </h1>
