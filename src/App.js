@@ -315,7 +315,7 @@ const App = () => {
     skills: [
       { 
         category: 'Frontend Development', 
-        items: ['HTML5', 'CSS3', 'JavaScript', 'React', 'Vue.js', 'TypeScript'],
+        items: ['HTML5', 'CSS3', 'JavaScript', 'React','TypeScript'],
         level: 90
       },
       { 
@@ -325,14 +325,10 @@ const App = () => {
       },
       { 
         category: 'Tools & Platforms', 
-        items: ['Git', 'Webpack', 'Docker', 'AWS', 'WordPress', 'Shopify'],
+        items: ['Git','WordPress', 'Shopify'],
         level: 80
       },
-      { 
-        category: 'UI/UX Design', 
-        items: ['Figma', 'Adobe XD', 'Responsive Design', 'Wireframing', 'Prototyping'],
-        level: 75
-      },
+      
     ],
     experience: [
       {
