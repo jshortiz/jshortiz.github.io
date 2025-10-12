@@ -97,7 +97,7 @@ body {
   animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* --- ENHANCED HEADER & NAVIGATION --- */
+/* --- HEADER & NAVIGATION --- */
 .header {
   position: fixed;
   top: 0;
@@ -232,7 +232,7 @@ body {
   z-index: -1;
 }
 
-/* --- ENHANCED HERO SECTION --- */
+/* ---  HERO SECTION --- */
 .hero {
   position: relative;
   padding: 160px 0 100px;
@@ -381,7 +381,7 @@ body {
   animation: pulse 2s infinite;
 }
 
-/* --- ENHANCED BUTTONS --- */
+/* ---  BUTTONS --- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -425,7 +425,7 @@ body {
   height: 20px;
 }
 
-/* --- ENHANCED SECTIONS --- */
+/* ---  SECTIONS --- */
 .section {
   padding: 100px 0;
 }
@@ -452,7 +452,7 @@ body {
   border-radius: 2px;
 }
 
-/* --- ENHANCED ABOUT SECTION --- */
+/* ---  ABOUT SECTION --- */
 .about-grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -534,7 +534,7 @@ body {
   color: var(--color-text-light);
 }
 
-/* --- ENHANCED SKILLS SECTION --- */
+/* --- SKILLS SECTION --- */
 .skills-container {
   max-width: 800px;
   margin: 0 auto;
@@ -618,7 +618,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* --- ENHANCED PROJECTS SECTION --- */
+/* ---  PROJECTS SECTION --- */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -730,7 +730,7 @@ body {
   border: 1px solid var(--color-border);
 }
 
-/* --- ENHANCED TIMELINE --- */
+/* ---  TIMELINE --- */
 .timeline {
   position: relative;
   max-width: 800px;
@@ -841,7 +841,7 @@ body {
   margin-top: 2px;
 }
 
-/* --- ENHANCED EDUCATION SECTION --- */
+/* --- EDUCATION SECTION --- */
 .education-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -917,7 +917,7 @@ body {
   color: var(--color-primary);
 }
 
-/* --- ENHANCED FOOTER --- */
+/* ---  FOOTER --- */
 .footer {
   background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
   color: white;
@@ -1006,7 +1006,7 @@ body {
   margin-top: 40px;
 }
 
-/* --- ENHANCED BACK TO TOP --- */
+/* ---  BACK TO TOP --- */
 .to-top {
   position: fixed;
   right: 24px;

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './App.css';
 
-// Enhanced Icon component with loading states
+//  Icon component with loading states
 const Icon = ({ path, className, loading }) => (
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
@@ -109,7 +109,7 @@ const ParticleBackground = () => {
   return <canvas ref={canvasRef} className="particle-background" />;
 };
 
-// Enhanced Back-to-top button with progress indicator
+//  Back-to-top button with progress indicator
 const BackToTop = () => {
   const [visible, setVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -204,7 +204,7 @@ const SkillBar = ({ category, items, level }) => {
   );
 };
 
-// Enhanced Project Card with hover effects
+// Project Card with hover effects
 const ProjectCard = ({ project, index }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -294,7 +294,7 @@ const App = () => {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Enhanced portfolio data
+  //  portfolio data
   const portfolioData = {
     name: 'Joshua Ortiz',
     title: 'Web Developer',
@@ -427,7 +427,7 @@ const App = () => {
 
   return (
     <div className="portfolio">
-      {/* Enhanced Header with mobile menu */}
+      {/* Header with mobile menu */}
       <header className="header">
         <div className="container">
           <nav className="navbar">
@@ -469,7 +469,7 @@ const App = () => {
       </header>
 
       <main>
-        {/* Enhanced Hero Section with Particles */}
+        {/* Hero Section with Particles */}
         <section id="home" className="hero">
           <ParticleBackground />
           <div className="container hero-container">
@@ -517,7 +517,7 @@ const App = () => {
           </div>
         </section>
 
-        {/* Enhanced About Section */}
+        {/*  About Section */}
         <section id="about" className="section">
           <div className="container">
             <h2 className="section-title">About Me</h2>
@@ -566,7 +566,7 @@ const App = () => {
           </div>
         </section>
 
-        {/* Enhanced Skills Section */}
+        {/*  Skills Section */}
         <section id="skills" className="section section-light">
           <div className="container">
             <h2 className="section-title">My Skills</h2>
@@ -583,7 +583,7 @@ const App = () => {
           </div>
         </section>
 
-        {/* Enhanced Projects Section */}
+        {/*  Projects Section */}
         <section id="projects" className="section">
           <div className="container">
             <h2 className="section-title">Featured Projects</h2>
@@ -599,7 +599,7 @@ const App = () => {
           </div>
         </section>
 
-        {/* Enhanced Experience Section */}
+        {/*  Experience Section */}
         <section id="experience" className="section section-light">
           <div className="container">
             <h2 className="section-title">Work Experience</h2>
@@ -632,7 +632,7 @@ const App = () => {
           </div>
         </section>
 
-        {/* Enhanced Education Section */}
+        {/*  Education Section */}
         <section id="education" className="section">
           <div className="container">
             <h2 className="section-title">Education</h2>
@@ -656,7 +656,7 @@ const App = () => {
         </section>
       </main>
 
-      {/* Enhanced Footer & Contact */}
+      {/*  Footer & Contact */}
       <footer id="contact" className="footer">
         <div className="container">
           <h2 className="footer-title">Get In Touch</h2>
@@ -692,7 +692,7 @@ const App = () => {
         </div>
       </footer>
 
-      {/* Enhanced Back-to-top button */}
+      {/*  Back-to-top button */}
       <BackToTop />
     </div>
   );
