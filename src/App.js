@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import ReactGA from 'react-ga4';
 import './App.css';
 
 //  Icon component with loading states
@@ -392,6 +393,10 @@ const App = () => {
       },
     ]
   };
+  
+    useEffect(() => {
+    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+  }, []);
 
   // Scroll spy for navigation
   useEffect(() => {
@@ -517,7 +522,7 @@ const App = () => {
           </div>
         </section>
 
-        {/*  About Section */}
+        {/* About Section */}
         <section id="about" className="section">
           <div className="container">
             <h2 className="section-title">About Me</h2>
@@ -566,7 +571,7 @@ const App = () => {
           </div>
         </section>
 
-        {/*  Skills Section */}
+        {/* Skills Section */}
         <section id="skills" className="section section-light">
           <div className="container">
             <h2 className="section-title">My Skills</h2>
@@ -583,7 +588,7 @@ const App = () => {
           </div>
         </section>
 
-        {/*  Projects Section */}
+        {/* Projects Section */}
         <section id="projects" className="section">
           <div className="container">
             <h2 className="section-title">Featured Projects</h2>
@@ -599,7 +604,7 @@ const App = () => {
           </div>
         </section>
 
-        {/*  Experience Section */}
+        {/* Experience Section */}
         <section id="experience" className="section section-light">
           <div className="container">
             <h2 className="section-title">Work Experience</h2>
@@ -632,7 +637,7 @@ const App = () => {
           </div>
         </section>
 
-        {/*  Education Section */}
+        {/* Education Section */}
         <section id="education" className="section">
           <div className="container">
             <h2 className="section-title">Education</h2>
@@ -656,7 +661,7 @@ const App = () => {
         </section>
       </main>
 
-      {/*  Footer & Contact */}
+      {/* Footer & Contact */}
       <footer id="contact" className="footer">
         <div className="container">
           <h2 className="footer-title">Get In Touch</h2>
@@ -692,7 +697,7 @@ const App = () => {
         </div>
       </footer>
 
-      {/*  Back-to-top button */}
+      {/* Back-to-top button */}
       <BackToTop />
     </div>
   );

@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import ReactGA from 'react-ga4';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+// Initialize Google Analytics with your Measurement ID
+ReactGA.initialize("G-0WXGCVYXSP");
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
