@@ -5,8 +5,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-// Initialize Google Analytics with your Measurement ID
-ReactGA.initialize("G-0WXGCVYXSP");
+// Detect if running locally
+const isLocal =
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1';
+
+// Initialize Google Analytics with the correct cookie domain
+ReactGA.initialize('G-0WXGCVYXSP', {
+  gaOptions: {
+    cookie_domain: isLocal ? 'none' : 'jshortiz.github.io',
+  },
+});
+
+// Send initial pageview
+ReactGA.send({ hitType: 'pageview', page: window.location.pathname });
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
