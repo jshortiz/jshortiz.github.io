@@ -239,20 +239,21 @@ function App() {
       tags: ['WordPress', 'WooCommerce', 'Shopify Liquid', 'Speed Optimization', 'Site Security']
     },
     {
-      role: 'IT Technical Support',
+      role: 'IT Technical Support & Web Developer',
       company: "St. Michael's College",
       period: 'June 2026 – Present',
       location: 'Iligan City, Philippines',
-      type: 'Systems & Infrastructure Support',
-      badge: 'Institutional IT',
+      type: 'Web Development & IT Infrastructure Support',
+      badge: 'Institutional IT & Web',
       badgeColor: 'accent',
       icon: '🖥️',
       bullets: [
+        "Manage, develop, and maintain the official St. Michael's College WordPress website, including custom themes, ACF dynamic content, and plugin updates.",
         'Install, configure, and maintain computer hardware, software, printers, and other IT equipment.',
         'Troubleshoot network, system, and technical issues for faculty, staff, and students.',
         'Provide user support, perform system updates, and document technical issues and solutions.'
       ],
-      tags: ['Hardware & Peripherals', 'Network Diagnostics', 'OS & Software Setup', 'User Support', 'Documentation']
+      tags: ['WordPress Management', 'Web Development', 'Hardware & Peripherals', 'Network Diagnostics', 'OS & Software Setup', 'User Support']
     }
   ];
 
