@@ -561,7 +561,11 @@ function App() {
                   <div className="w-full h-full rounded-full overflow-hidden bg-slate-900">
                     <img 
                       src={`${process.env.PUBLIC_URL}/grad-pic.jpg`} 
-                      alt="Joshua Ortiz — WordPress & Shopify Developer" 
+                      alt="Joshua Ortiz — Professional WordPress & Shopify Developer" 
+                      width="320" 
+                      height="320" 
+                      fetchpriority="high" 
+                      decoding="async" 
                       className="w-full h-full object-cover object-top"
                       onError={(e) => {
                         e.target.src = 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80';
@@ -907,7 +911,11 @@ function App() {
                   <div className="relative h-64 overflow-hidden bg-slate-900 border-b border-slate-800">
                     <img 
                       src={project.image} 
-                      alt={project.title} 
+                      alt={`${project.title} — WordPress and Shopify Showcase by Joshua Ortiz`} 
+                      width="688" 
+                      height="256" 
+                      loading="lazy" 
+                      decoding="async" 
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       onError={(e) => {
                         e.target.src = project.type === 'wordpress' 
